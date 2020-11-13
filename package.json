@@ -8,8 +8,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node ./src/app.ts",
-    "start": "node ./build/app.js"
+    "dev": "ts-node ./src/index.ts",
+    "start": "node ./build/index.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.9",
