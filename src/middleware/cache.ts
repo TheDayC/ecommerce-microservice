@@ -10,7 +10,7 @@ export function cacheData(id: string, data: IProduct[], duration: number): void 
 
 export function loadProducts(id: string, cache: CacheClass<unknown, unknown>): any {
     return (req: CustomRequest, res: Response, next: NextFunction) => {
-        const products = cache.get(id) as IProduct[]; // Ideally this would be parsed properly from unknown to IProduct[]
+        const products = cache.get(id) as IProduct[]; // Ideally this would be parsed properly from unknown to IProduct[] using a typeguard
         
         req.products = products ? products : undefined;
 
