@@ -4,7 +4,8 @@ export interface IProduct {
     id: number;
     name: string;
     weight: number;
-    delivery_days: number; 
+    delivery_days: number;
+    price: number;
 }
 
 export interface ICartItem extends IProduct{

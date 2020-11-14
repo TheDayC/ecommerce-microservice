@@ -87,3 +87,16 @@ export function clearCart(cache: Cache): ExpressFunc {
         next();
     }
 }
+
+export function listCart(cache: Cache): ExpressFunc {
+    return (req: CustomRequest, res: Response, next: NextFunction) => {
+        const cart = cache.get('cart') as ICartItem[];
+
+        // Stringify and send our cart back.
+        res.status(200).send(JSON.stringify(cart));
+
+        next();
+    }
+}
+
+
