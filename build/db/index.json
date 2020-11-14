@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Sample Product 1",
+            "weight": 1,
+            "delivery_days": 1,
+            "price": 20.50
+        },
+        {
+            "id": 2,
+            "name": "Sample Product 2",
+            "weight": 4,
+            "delivery_days": 7,
+            "price": 13.99
+        }
+    ],
+    "cart": []
+}
