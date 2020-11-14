@@ -5,7 +5,7 @@ import * as db from './db/index.json';
 
 import {cacheData} from './middleware/cache';
 import {index} from './routes';
-import { addProduct, removeProduct, clearCart} from './routes/products';
+import { addProduct, removeProduct, clearCart, listCart} from './routes/products';
 
 require('dotenv').config();
 
@@ -22,6 +22,9 @@ cacheData('cart', cart, 100, cache);
 // Fetch root automatically to display something on load
 app.get('/', index);
 
+// Remove all items from cart
+app.get('/cart', listCart(cache));
+
 // Add item to cart
 app.post('/cart/add/:id', addProduct(cache));
 
@@ -29,7 +32,7 @@ app.post('/cart/add/:id', addProduct(cache));
 app.post('/cart/remove/:id', removeProduct(cache));
 
 // Remove all items from cart
-app.post('/cart/clear', clearCart(cache));
+app.get('/cart/clear', clearCart(cache));
 
 // Set Express to list to our port provided in the dotenv config file.
 app.listen(port, () => {
