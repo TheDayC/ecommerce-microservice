@@ -1,5 +1,5 @@
 {
-    "items": [
+    "products": [
         {
             "id": 1,
             "name": "Sample Product 1",
@@ -12,5 +12,6 @@
             "weight": 4,
             "delivery_days": 7
         }
-    ]
+    ],
+    "cart": []
 }
